@@ -4,9 +4,19 @@ body {
   color: #434455;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -17,8 +27,34 @@ button {
   cursor: pointer;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 /* #region Heder */
+.header-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e7e9fc;
+}
+
 .nav-bar {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
 }
 .logo {
   font-family: 'Raleway', sans-serif;
@@ -28,6 +64,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 .logo-header {
   font-family: 'Raleway', sans-serif;
@@ -39,8 +76,8 @@ button {
   color: #2e2f42;
 }
 .nav-list {
-}
-.nav-list-item {
+  display: flex;
+  gap: 40px;
 }
 
 .nav-list-item-link {
@@ -49,6 +86,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
 }
 .nav-list-item-link:hover,
 .nav-list-item-link:focus {
@@ -58,9 +96,11 @@ button {
   font-style: normal;
 }
 .address-link-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
-.address-link-list-item {
-}
+
 .address-link-list-item-link {
   font-weight: 400;
   font-size: 16px;
@@ -76,7 +116,9 @@ button {
 /* #region Hero */
 .section-hero {
   background: #2e2f42;
+  padding: 188px 0;
 }
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -84,6 +126,9 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  margin: 0 auto;
+  margin-bottom: 48px;
+  max-width: 496px;
 }
 .button-section-hero {
   font-family: 'Roboto', sans-serif;
@@ -93,6 +138,11 @@ button {
   letter-spacing: 0.04em;
   color: #fff;
   background: #4d5ae5;
+  border-radius: 4px;
+  padding: 16px 32px;
+  height: 56px;
+  margin: 0 auto;
+  display: block;
 }
 
 .button-section-hero:hover,
@@ -101,13 +151,16 @@ button {
 }
 /* #endregion Hero */
 /* #region section Features */
-.section-features {
-}
 .features-title {
+  text-align: center;
+  margin-bottom: 24px;
 }
 .section-features-list {
+  display: flex;
+  gap: 48px 24px;
 }
 .section-features-list-item {
+  width: calc((100% - 48px) / 4);
 }
 .title-features-list-item {
   font-weight: 500;
@@ -116,6 +169,7 @@ button {
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 8px;
 }
 .text-features-list-item {
   font-weight: 400;
@@ -130,6 +184,7 @@ button {
 .section-team {
   background: #f4f4fd;
 }
+
 .title-section-team {
   font-weight: 700;
   font-size: 36px;
@@ -138,11 +193,21 @@ button {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 .section-team-list {
+  display: flex;
+  gap: 48px 24px;
 }
+
+.section-team-list-item-div {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .section-team-list-item {
   background-color: #ffffff;
+  width: calc((100% - 48px) / 4);
 }
 .section-team-list-item-title {
   font-weight: 500;
@@ -151,6 +216,7 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .section-team-list-item-text {
   font-weight: 400;
@@ -162,8 +228,6 @@ button {
 }
 /* #endregion section Team */
 /* #region section Portfolio */
-.section-portfolio {
-}
 .section-portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -172,17 +236,35 @@ button {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 .section-portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+  align-items: center;
 }
+
 .section-portfolio-list-item {
+  flex-basis: calc((100% - 48px) / 3);
 }
+
+.section-features-list-item-div {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding-top: 32px;
+  padding-left: 16px;
+  padding-bottom: 32px;
+}
+
 .section-features-list-item-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .section-features-list-item-text {
   font-weight: 400;
@@ -193,8 +275,10 @@ button {
 }
 /* #endregion section Portfolio */
 /* #region Footer */
-.footer {
+.footer-div {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .logo-footer {
   color: #f4f4fd;
@@ -205,5 +289,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
+  padding-top: 16px;
 }
 /* #endregion Footer */
